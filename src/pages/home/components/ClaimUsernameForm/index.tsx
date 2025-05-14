@@ -17,7 +17,7 @@ const claimUsernameFormSchema = z.object({
 
 type ClaimUsernameData = z.infer<typeof claimUsernameFormSchema>
 
-type InputProps = TextInputProps | undefined
+type InputProps = Partial<TextInputProps>
 
 export function ClaimUsernameForm(props: InputProps){
 
