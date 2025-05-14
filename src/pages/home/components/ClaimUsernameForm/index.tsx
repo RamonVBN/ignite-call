@@ -34,7 +34,7 @@ export function ClaimUsernameForm(){
     return (
         <>
         <Form onSubmit={handleSubmit(handleClaimUsername)} as='form'>
-            <TextInput required {...register('username')} size='sm' prefix="ignite.com/" placeholder="seu-usuário"/>
+            <TextInput crossOrigin="anonymous" required {...register('username')} size='sm' prefix="ignite.com/" placeholder="seu-usuário"/>
             <Button type="submit" disabled={isSubmitting}>
                 Reservar
                 <ArrowRight/>
