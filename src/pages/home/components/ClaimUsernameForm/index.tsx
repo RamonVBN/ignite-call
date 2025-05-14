@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 import {z} from 'zod'
 import {zodResolver} from '@hookform/resolvers/zod'
 import { useRouter } from "next/router";
-import { type TextInputProps } from "@ignite-ui/react";
 
 
 const claimUsernameFormSchema = z.object({
@@ -17,9 +16,7 @@ const claimUsernameFormSchema = z.object({
 
 type ClaimUsernameData = z.infer<typeof claimUsernameFormSchema>
 
-type InputProps = Partial<TextInputProps>
-
-export function ClaimUsernameForm(props: InputProps){
+export function ClaimUsernameForm(){
 
     const router = useRouter()
 
@@ -37,7 +34,7 @@ export function ClaimUsernameForm(props: InputProps){
     return (
         <>
         <Form onSubmit={handleSubmit(handleClaimUsername)} as='form'>
-            <TextInput {...props} required {...register('username')} size='sm' prefix="ignite.com/" placeholder="seu-usuário"/>
+            <TextInput required {...register('username')} size='sm' prefix="ignite.com/" placeholder="seu-usuário"/>
             <Button type="submit" disabled={isSubmitting}>
                 Reservar
                 <ArrowRight/>
