@@ -17,7 +17,7 @@ const claimUsernameFormSchema = z.object({
 
 type ClaimUsernameData = z.infer<typeof claimUsernameFormSchema>
 
-type InputProps = TextInputProps
+type InputProps = TextInputProps | undefined
 
 export function ClaimUsernameForm(props: InputProps){
 
@@ -37,7 +37,7 @@ export function ClaimUsernameForm(props: InputProps){
     return (
         <>
         <Form onSubmit={handleSubmit(handleClaimUsername)} as='form'>
-            <TextInput {...props}  required {...register('username')} size='sm' prefix="ignite.com/" placeholder="seu-usuário"/>
+            <TextInput {...props} required {...register('username')} size='sm' prefix="ignite.com/" placeholder="seu-usuário"/>
             <Button type="submit" disabled={isSubmitting}>
                 Reservar
                 <ArrowRight/>
