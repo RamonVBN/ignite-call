@@ -7,9 +7,8 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DATABASE_DIRECT_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model User {
@@ -18,7 +17,10 @@ model User {
   name     String
   bio      String? @db.Text
 
-  email      String? @unique
+  email String? @unique
+
+  emailVerified String?
+
   avatar_url String?
 
   created_at DateTime @default(now())

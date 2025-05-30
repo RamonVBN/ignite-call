@@ -1306,6 +1306,7 @@ export namespace Prisma {
     name: string | null
     bio: string | null
     email: string | null
+    emailVerified: string | null
     avatar_url: string | null
     created_at: Date | null
   }
@@ -1316,6 +1317,7 @@ export namespace Prisma {
     name: string | null
     bio: string | null
     email: string | null
+    emailVerified: string | null
     avatar_url: string | null
     created_at: Date | null
   }
@@ -1326,6 +1328,7 @@ export namespace Prisma {
     name: number
     bio: number
     email: number
+    emailVerified: number
     avatar_url: number
     created_at: number
     _all: number
@@ -1338,6 +1341,7 @@ export namespace Prisma {
     name?: true
     bio?: true
     email?: true
+    emailVerified?: true
     avatar_url?: true
     created_at?: true
   }
@@ -1348,6 +1352,7 @@ export namespace Prisma {
     name?: true
     bio?: true
     email?: true
+    emailVerified?: true
     avatar_url?: true
     created_at?: true
   }
@@ -1358,6 +1363,7 @@ export namespace Prisma {
     name?: true
     bio?: true
     email?: true
+    emailVerified?: true
     avatar_url?: true
     created_at?: true
     _all?: true
@@ -1441,6 +1447,7 @@ export namespace Prisma {
     name: string
     bio: string | null
     email: string | null
+    emailVerified: string | null
     avatar_url: string | null
     created_at: Date
     _count: UserCountAggregateOutputType | null
@@ -1468,6 +1475,7 @@ export namespace Prisma {
     name?: boolean
     bio?: boolean
     email?: boolean
+    emailVerified?: boolean
     avatar_url?: boolean
     created_at?: boolean
     accounts?: boolean | User$accountsArgs<ExtArgs>
@@ -1483,6 +1491,7 @@ export namespace Prisma {
     name?: boolean
     bio?: boolean
     email?: boolean
+    emailVerified?: boolean
     avatar_url?: boolean
     created_at?: boolean
   }, ExtArgs["result"]["user"]>
@@ -1493,6 +1502,7 @@ export namespace Prisma {
     name?: boolean
     bio?: boolean
     email?: boolean
+    emailVerified?: boolean
     avatar_url?: boolean
     created_at?: boolean
   }, ExtArgs["result"]["user"]>
@@ -1503,11 +1513,12 @@ export namespace Prisma {
     name?: boolean
     bio?: boolean
     email?: boolean
+    emailVerified?: boolean
     avatar_url?: boolean
     created_at?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "username" | "name" | "bio" | "email" | "avatar_url" | "created_at", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "username" | "name" | "bio" | "email" | "emailVerified" | "avatar_url" | "created_at", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     accounts?: boolean | User$accountsArgs<ExtArgs>
     sessions?: boolean | User$sessionsArgs<ExtArgs>
@@ -1532,6 +1543,7 @@ export namespace Prisma {
       name: string
       bio: string | null
       email: string | null
+      emailVerified: string | null
       avatar_url: string | null
       created_at: Date
     }, ExtArgs["result"]["user"]>
@@ -1966,6 +1978,7 @@ export namespace Prisma {
     readonly name: FieldRef<"User", 'String'>
     readonly bio: FieldRef<"User", 'String'>
     readonly email: FieldRef<"User", 'String'>
+    readonly emailVerified: FieldRef<"User", 'String'>
     readonly avatar_url: FieldRef<"User", 'String'>
     readonly created_at: FieldRef<"User", 'DateTime'>
   }
@@ -6902,6 +6915,7 @@ export namespace Prisma {
     name: 'name',
     bio: 'bio',
     email: 'email',
+    emailVerified: 'emailVerified',
     avatar_url: 'avatar_url',
     created_at: 'created_at'
   };
@@ -7058,6 +7072,7 @@ export namespace Prisma {
     name?: StringFilter<"User"> | string
     bio?: StringNullableFilter<"User"> | string | null
     email?: StringNullableFilter<"User"> | string | null
+    emailVerified?: StringNullableFilter<"User"> | string | null
     avatar_url?: StringNullableFilter<"User"> | string | null
     created_at?: DateTimeFilter<"User"> | Date | string
     accounts?: AccountListRelationFilter
@@ -7072,6 +7087,7 @@ export namespace Prisma {
     name?: SortOrder
     bio?: SortOrderInput | SortOrder
     email?: SortOrderInput | SortOrder
+    emailVerified?: SortOrderInput | SortOrder
     avatar_url?: SortOrderInput | SortOrder
     created_at?: SortOrder
     accounts?: AccountOrderByRelationAggregateInput
@@ -7089,6 +7105,7 @@ export namespace Prisma {
     NOT?: UserWhereInput | UserWhereInput[]
     name?: StringFilter<"User"> | string
     bio?: StringNullableFilter<"User"> | string | null
+    emailVerified?: StringNullableFilter<"User"> | string | null
     avatar_url?: StringNullableFilter<"User"> | string | null
     created_at?: DateTimeFilter<"User"> | Date | string
     accounts?: AccountListRelationFilter
@@ -7103,6 +7120,7 @@ export namespace Prisma {
     name?: SortOrder
     bio?: SortOrderInput | SortOrder
     email?: SortOrderInput | SortOrder
+    emailVerified?: SortOrderInput | SortOrder
     avatar_url?: SortOrderInput | SortOrder
     created_at?: SortOrder
     _count?: UserCountOrderByAggregateInput
@@ -7119,6 +7137,7 @@ export namespace Prisma {
     name?: StringWithAggregatesFilter<"User"> | string
     bio?: StringNullableWithAggregatesFilter<"User"> | string | null
     email?: StringNullableWithAggregatesFilter<"User"> | string | null
+    emailVerified?: StringNullableWithAggregatesFilter<"User"> | string | null
     avatar_url?: StringNullableWithAggregatesFilter<"User"> | string | null
     created_at?: DateTimeWithAggregatesFilter<"User"> | Date | string
   }
@@ -7394,6 +7413,7 @@ export namespace Prisma {
     name: string
     bio?: string | null
     email?: string | null
+    emailVerified?: string | null
     avatar_url?: string | null
     created_at?: Date | string
     accounts?: AccountCreateNestedManyWithoutUserInput
@@ -7408,6 +7428,7 @@ export namespace Prisma {
     name: string
     bio?: string | null
     email?: string | null
+    emailVerified?: string | null
     avatar_url?: string | null
     created_at?: Date | string
     accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
@@ -7422,6 +7443,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     email?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableStringFieldUpdateOperationsInput | string | null
     avatar_url?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     accounts?: AccountUpdateManyWithoutUserNestedInput
@@ -7436,6 +7458,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     email?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableStringFieldUpdateOperationsInput | string | null
     avatar_url?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
@@ -7450,6 +7473,7 @@ export namespace Prisma {
     name: string
     bio?: string | null
     email?: string | null
+    emailVerified?: string | null
     avatar_url?: string | null
     created_at?: Date | string
   }
@@ -7460,6 +7484,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     email?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableStringFieldUpdateOperationsInput | string | null
     avatar_url?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -7470,6 +7495,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     email?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableStringFieldUpdateOperationsInput | string | null
     avatar_url?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -7842,6 +7868,7 @@ export namespace Prisma {
     name?: SortOrder
     bio?: SortOrder
     email?: SortOrder
+    emailVerified?: SortOrder
     avatar_url?: SortOrder
     created_at?: SortOrder
   }
@@ -7852,6 +7879,7 @@ export namespace Prisma {
     name?: SortOrder
     bio?: SortOrder
     email?: SortOrder
+    emailVerified?: SortOrder
     avatar_url?: SortOrder
     created_at?: SortOrder
   }
@@ -7862,6 +7890,7 @@ export namespace Prisma {
     name?: SortOrder
     bio?: SortOrder
     email?: SortOrder
+    emailVerified?: SortOrder
     avatar_url?: SortOrder
     created_at?: SortOrder
   }
@@ -8769,6 +8798,7 @@ export namespace Prisma {
     name: string
     bio?: string | null
     email?: string | null
+    emailVerified?: string | null
     avatar_url?: string | null
     created_at?: Date | string
     sessions?: SessionCreateNestedManyWithoutUserInput
@@ -8782,6 +8812,7 @@ export namespace Prisma {
     name: string
     bio?: string | null
     email?: string | null
+    emailVerified?: string | null
     avatar_url?: string | null
     created_at?: Date | string
     sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
@@ -8811,6 +8842,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     email?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableStringFieldUpdateOperationsInput | string | null
     avatar_url?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     sessions?: SessionUpdateManyWithoutUserNestedInput
@@ -8824,6 +8856,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     email?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableStringFieldUpdateOperationsInput | string | null
     avatar_url?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
@@ -8837,6 +8870,7 @@ export namespace Prisma {
     name: string
     bio?: string | null
     email?: string | null
+    emailVerified?: string | null
     avatar_url?: string | null
     created_at?: Date | string
     accounts?: AccountCreateNestedManyWithoutUserInput
@@ -8850,6 +8884,7 @@ export namespace Prisma {
     name: string
     bio?: string | null
     email?: string | null
+    emailVerified?: string | null
     avatar_url?: string | null
     created_at?: Date | string
     accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
@@ -8879,6 +8914,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     email?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableStringFieldUpdateOperationsInput | string | null
     avatar_url?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     accounts?: AccountUpdateManyWithoutUserNestedInput
@@ -8892,6 +8928,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     email?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableStringFieldUpdateOperationsInput | string | null
     avatar_url?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
@@ -8905,6 +8942,7 @@ export namespace Prisma {
     name: string
     bio?: string | null
     email?: string | null
+    emailVerified?: string | null
     avatar_url?: string | null
     created_at?: Date | string
     accounts?: AccountCreateNestedManyWithoutUserInput
@@ -8918,6 +8956,7 @@ export namespace Prisma {
     name: string
     bio?: string | null
     email?: string | null
+    emailVerified?: string | null
     avatar_url?: string | null
     created_at?: Date | string
     accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
@@ -8947,6 +8986,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     email?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableStringFieldUpdateOperationsInput | string | null
     avatar_url?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     accounts?: AccountUpdateManyWithoutUserNestedInput
@@ -8960,6 +9000,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     email?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableStringFieldUpdateOperationsInput | string | null
     avatar_url?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
@@ -8973,6 +9014,7 @@ export namespace Prisma {
     name: string
     bio?: string | null
     email?: string | null
+    emailVerified?: string | null
     avatar_url?: string | null
     created_at?: Date | string
     accounts?: AccountCreateNestedManyWithoutUserInput
@@ -8986,6 +9028,7 @@ export namespace Prisma {
     name: string
     bio?: string | null
     email?: string | null
+    emailVerified?: string | null
     avatar_url?: string | null
     created_at?: Date | string
     accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
@@ -9015,6 +9058,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     email?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableStringFieldUpdateOperationsInput | string | null
     avatar_url?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     accounts?: AccountUpdateManyWithoutUserNestedInput
@@ -9028,6 +9072,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     email?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableStringFieldUpdateOperationsInput | string | null
     avatar_url?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
