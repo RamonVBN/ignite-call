@@ -116,11 +116,10 @@ export default function Register(){
                                 <Text>{weekDays[field.weekDay]}</Text>
                             </IntervalDay>
                             <IntervalInputs>
-                                <TextInput disabled={intervals[index].enabled === false} {...register(`intervals.${index}.startTime`)} type='time' step={60} size='sm'/>
-                                <TextInput disabled={intervals[index].enabled === false} {...register(`intervals.${index}.endTime`)} type='time' step={60} size='sm'/>
+                                <TextInput  disabled={intervals[index].enabled === false} {...register(`intervals.${index}.startTime`)} type='time' step={3600} size='sm'/>
+                                <TextInput disabled={intervals[index].enabled === false} {...register(`intervals.${index}.endTime`)} type='time'  step={3600} size='sm'/>
                             </IntervalInputs>
                         </IntervalItem>
-    
                         )
                     })}
                   
