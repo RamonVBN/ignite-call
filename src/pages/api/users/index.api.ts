@@ -16,7 +16,7 @@ export default async function handler(
 
     try {
 
-        const {name, username} = await req.body
+        const {name, username} =  req.body
 
         const userExists = await prisma.user.findUnique({
             where: {
@@ -44,7 +44,7 @@ export default async function handler(
 
         return res.status(201).json({user});
     } catch (error) {
-       return res.status(500).end()
+       return res.status(500).json({error})
     }
 
     
